@@ -3,11 +3,11 @@ version: '>= 0.14.0'
 formatter: markdown table
 
 content: |-
-  # Terraform Intersight Policies - Adapter Configuration
-  Manages Intersight Adapter Configuration Policies
+  # Terraform Intersight Policies - IPMI over LAN
+  Manages Intersight IPMI over LAN Policies
   
   Location in GUI:
-  `Policies` » `Create Policy` » `Adapter Configuration`
+  `Policies` » `Create Policy` » `IPMI over LAN`
 
   ## Example
 
