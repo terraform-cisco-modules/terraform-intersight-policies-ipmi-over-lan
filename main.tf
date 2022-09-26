@@ -49,7 +49,7 @@ resource "intersight_ipmioverlan_policy" "ipmi" {
   ]
   description    = var.description != "" ? var.description : "${var.name} IPMI over LAN Policy."
   enabled        = var.enabled
-  encryption_key = var.encryption_key
+  encryption_key = var.ipmi_key == 1 ? var.ipmi_key_1 : null
   privilege      = var.privilege
   name           = var.name
   organization {

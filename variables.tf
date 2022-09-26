@@ -15,9 +15,15 @@ variable "enabled" {
   type        = bool
 }
 
-variable "encryption_key" {
+variable "ipmi_key" {
+  default     = null
+  description = "If null then encryption will not be applied.  If the value is set to 1 it will apply the ipmi_key_1 value."
+  type        = number
+}
+
+variable "ipmi_key_1" {
   default     = ""
-  description = "The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."
+  description = "Encryption key 1 to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."
   sensitive   = true
   type        = string
 }
@@ -25,10 +31,10 @@ variable "encryption_key" {
 variable "privilege" {
   default     = "admin"
   description = <<-EOT
-  The highest privilege level that can be assigned to an IPMI session on a server.
-  * admin - Privilege to perform all actions available through IPMI.
-  * user - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.
-  * read-only - Privilege to view information throught IPMI but restriction on making any changes.
+    The highest privilege level that can be assigned to an IPMI session on a server.
+    * admin - Privilege to perform all actions available through IPMI.
+    * user - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.
+    * read-only - Privilege to view information throught IPMI but restriction on making any changes.
   EOT
   type        = string
 }
