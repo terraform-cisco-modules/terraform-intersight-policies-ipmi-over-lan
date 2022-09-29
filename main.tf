@@ -41,7 +41,7 @@ data "intersight_server_profile_template" "templates" {
 # GUI Location: Policies > Create Policy > IPMI over LAN
 #__________________________________________________________________
 
-resource "intersight_ipmioverlan_policy" "ipmi" {
+resource "intersight_ipmioverlan_policy" "ipmi_over_lan" {
   depends_on = [
     data.intersight_server_profile.profiles,
     data.intersight_server_profile_template.templates,
