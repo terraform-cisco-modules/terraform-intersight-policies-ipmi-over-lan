@@ -20,7 +20,7 @@ variable "intersight_endpoint" {
   default = "intersight.com"
 }
 variable "ipmi_key_1" {
-  sensitive = true
+  sensitive = false
   type      = string
 }
 variable "name" {}
