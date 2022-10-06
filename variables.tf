@@ -24,7 +24,7 @@ variable "ipmi_key" {
 variable "ipmi_key_1" {
   default     = ""
   description = "Encryption key 1 to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."
-  sensitive   = true
+  sensitive   = false
   type        = string
 }
 
