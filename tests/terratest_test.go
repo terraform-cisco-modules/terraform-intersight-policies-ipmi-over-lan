@@ -54,7 +54,7 @@ func TestFull(t *testing.T) {
 	"Description": "{{ .name }} IPMI over LAN Policy.",
 
 	"Enabled": true,
-	"IsEncryptionKeySet": true,
+	"IsEncryptionKeySet": true
 }
 `
 	// Validate that what is in the Intersight API matches the expected
