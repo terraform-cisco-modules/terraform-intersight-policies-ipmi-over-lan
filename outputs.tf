@@ -10,4 +10,5 @@ output "moid" {
 
 output "key" {
   value = var.ipmi_key_1
+  sensitive = true
 }
