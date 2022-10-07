@@ -29,6 +29,10 @@ output "moid" {
   value = module.main.moid
 }
 
+output "key" {
+  value = module.main.key
+}
+
 # This is the module under test
 module "main" {
   source       = "../.."
