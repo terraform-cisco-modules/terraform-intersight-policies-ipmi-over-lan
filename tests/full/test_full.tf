@@ -31,6 +31,7 @@ output "moid" {
 
 output "key" {
   value = module.main.key
+  sensitive = true
 }
 
 # This is the module under test
