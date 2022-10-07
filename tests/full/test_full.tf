@@ -20,7 +20,7 @@ variable "intersight_endpoint" {
   default = "intersight.com"
 }
 variable "ipmi_key_1" {
-  sensitive = false
+  sensitive = true
   type      = string
 }
 variable "name" {}
@@ -35,6 +35,7 @@ module "main" {
   description  = "${var.name} IPMI over LAN Policy."
   enabled      = true
   ipmi_key     = 1
+  ipmi_key_1   = var.ipmi_key_1
   name         = var.name
   organization = "terratest"
 }
