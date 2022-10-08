@@ -30,7 +30,7 @@ output "moid" {
 }
 
 output "key" {
-  value = module.main.key
+  value     = module.main.key
   sensitive = true
 }
 
